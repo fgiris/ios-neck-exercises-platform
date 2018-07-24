@@ -7,12 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57997BB5EF84C123374A55E1 /* Pods_MarmaraEgzersizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D707DEE173382FDF82761BF /* Pods_MarmaraEgzersizTests.framework */; };
+		6BFBDE880F02AC6C0DFB38F9 /* Pods_MarmaraEgzersiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB9FB2678D3BB10F3B56CE3 /* Pods_MarmaraEgzersiz.framework */; };
+		D40E2340209F7547006DCAF3 /* ExerciseVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E233F209F7547006DCAF3 /* ExerciseVideoViewController.swift */; };
+		D40E2344209FC7AF006DCAF3 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E2343209FC7AF006DCAF3 /* TermsViewController.swift */; };
+		D423EB3C20A103640051E594 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423EB3B20A103630051E594 /* SettingsTableViewCell.swift */; };
+		D423EB4020A1042F0051E594 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423EB3F20A1042F0051E594 /* SettingsViewController.swift */; };
+		D423EB4720A10C480051E594 /* SettingsDaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423EB4520A10C480051E594 /* SettingsDaysTableViewCell.swift */; };
+		D423EB4820A10C480051E594 /* SettingsHoursTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423EB4620A10C480051E594 /* SettingsHoursTableViewCell.swift */; };
+		D4462508209C76D8002E4238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4462507209C76D7002E4238 /* Assets.xcassets */; };
+		D446250A209C848E002E4238 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4462509209C848E002E4238 /* ExercisesViewController.swift */; };
+		D446250C209CA204002E4238 /* LastSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D446250B209CA204002E4238 /* LastSurveyViewController.swift */; };
+		D446250F209CA365002E4238 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D446250E209CA365002E4238 /* Identifiers.swift */; };
+		D4462512209CB34A002E4238 /* Muscle1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4462511209CB34A002E4238 /* Muscle1ViewController.swift */; };
+		D4462514209CB357002E4238 /* Muscle2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4462513209CB357002E4238 /* Muscle2ViewController.swift */; };
+		D4462516209CB361002E4238 /* Muscle3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4462515209CB361002E4238 /* Muscle3ViewController.swift */; };
+		D44A0EC220A38F2F005789D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D44A0EC120A38F2F005789D6 /* GoogleService-Info.plist */; };
+		D454DD65209C7535005F3209 /* PainSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454DD64209C7535005F3209 /* PainSurveyViewController.swift */; };
+		D45ECDF4209B48A800244EFE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45ECDF3209B48A800244EFE /* RegisterViewController.swift */; };
+		D4720F70209DC01E00CD9567 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4720F6F209DC01E00CD9567 /* ExerciseTableViewController.swift */; };
+		D4720F73209DC05F00CD9567 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4720F72209DC05F00CD9567 /* ExerciseTableViewCell.swift */; };
+		D479C06A20A253060094F3BB /* StatisticsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C06920A253060094F3BB /* StatisticsPageViewController.swift */; };
+		D479C06D20A253F30094F3BB /* DailyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C06C20A253F30094F3BB /* DailyStatisticsViewController.swift */; };
+		D479C06F20A254050094F3BB /* WeeklyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C06E20A254050094F3BB /* WeeklyStatisticsViewController.swift */; };
+		D480ADC620F63F2100279F26 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480ADC520F63F2100279F26 /* NetworkHelper.swift */; };
+		D497CF01209B5BE800E44423 /* FirebaseDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497CF00209B5BE800E44423 /* FirebaseDBHelper.swift */; };
+		D49FDBE020A1DFD6001758EF /* FbSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49FDBDF20A1DFD6001758EF /* FbSettings.swift */; };
+		D4DC3629209EDD890098577F /* FbExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC3628209EDD890098577F /* FbExercise.swift */; };
+		D4DC362B209F497F0098577F /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC362A209F497F0098577F /* ExerciseDetailViewController.swift */; };
 		D4EF5714208C7C0300FEC689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF5713208C7C0300FEC689 /* AppDelegate.swift */; };
-		D4EF5716208C7C0300FEC689 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF5715208C7C0300FEC689 /* ViewController.swift */; };
+		D4EF5716208C7C0300FEC689 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF5715208C7C0300FEC689 /* LoginViewController.swift */; };
 		D4EF5719208C7C0300FEC689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4EF5717208C7C0300FEC689 /* Main.storyboard */; };
-		D4EF571B208C7C0500FEC689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EF571A208C7C0500FEC689 /* Assets.xcassets */; };
 		D4EF571E208C7C0500FEC689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4EF571C208C7C0500FEC689 /* LaunchScreen.storyboard */; };
 		D4EF5729208C7C0500FEC689 /* MarmaraEgzersizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF5728208C7C0500FEC689 /* MarmaraEgzersizTests.swift */; };
+		D4FDB7CB209B622400DFA999 /* FbUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FDB7CA209B622400DFA999 /* FbUser.swift */; };
+		D4FDB7D1209B97F100DFA999 /* ControllerFunctionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FDB7D0209B97F100DFA999 /* ControllerFunctionsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +55,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D707DEE173382FDF82761BF /* Pods_MarmaraEgzersizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarmaraEgzersizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AFFDE4B0CF8F3C5E36E5E8B /* Pods-MarmaraEgzersizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarmaraEgzersizTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarmaraEgzersizTests/Pods-MarmaraEgzersizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB9FB2678D3BB10F3B56CE3 /* Pods_MarmaraEgzersiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarmaraEgzersiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6280115D00302A332325CFE7 /* Pods-MarmaraEgzersiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarmaraEgzersiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarmaraEgzersiz/Pods-MarmaraEgzersiz.debug.xcconfig"; sourceTree = "<group>"; };
+		96CB8581C038585163D762F2 /* Pods-MarmaraEgzersiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarmaraEgzersiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarmaraEgzersiz/Pods-MarmaraEgzersiz.release.xcconfig"; sourceTree = "<group>"; };
+		B7992F84F9449DF0564F925D /* Pods-MarmaraEgzersizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarmaraEgzersizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarmaraEgzersizTests/Pods-MarmaraEgzersizTests.release.xcconfig"; sourceTree = "<group>"; };
+		D40E233F209F7547006DCAF3 /* ExerciseVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVideoViewController.swift; sourceTree = "<group>"; };
+		D40E2343209FC7AF006DCAF3 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		D423EB3B20A103630051E594 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		D423EB3F20A1042F0051E594 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D423EB4520A10C480051E594 /* SettingsDaysTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDaysTableViewCell.swift; sourceTree = "<group>"; };
+		D423EB4620A10C480051E594 /* SettingsHoursTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHoursTableViewCell.swift; sourceTree = "<group>"; };
+		D4462507209C76D7002E4238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4462509209C848E002E4238 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
+		D446250B209CA204002E4238 /* LastSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSurveyViewController.swift; sourceTree = "<group>"; };
+		D446250E209CA365002E4238 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		D4462511209CB34A002E4238 /* Muscle1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle1ViewController.swift; sourceTree = "<group>"; };
+		D4462513209CB357002E4238 /* Muscle2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle2ViewController.swift; sourceTree = "<group>"; };
+		D4462515209CB361002E4238 /* Muscle3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle3ViewController.swift; sourceTree = "<group>"; };
+		D44A0EC120A38F2F005789D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D454DD64209C7535005F3209 /* PainSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainSurveyViewController.swift; sourceTree = "<group>"; };
+		D45ECDF3209B48A800244EFE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D4720F6F209DC01E00CD9567 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
+		D4720F72209DC05F00CD9567 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		D479C06920A253060094F3BB /* StatisticsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPageViewController.swift; sourceTree = "<group>"; };
+		D479C06C20A253F30094F3BB /* DailyStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatisticsViewController.swift; sourceTree = "<group>"; };
+		D479C06E20A254050094F3BB /* WeeklyStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyStatisticsViewController.swift; sourceTree = "<group>"; };
+		D480ADC520F63F2100279F26 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		D497CF00209B5BE800E44423 /* FirebaseDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDBHelper.swift; sourceTree = "<group>"; };
+		D49FDBDF20A1DFD6001758EF /* FbSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbSettings.swift; sourceTree = "<group>"; };
+		D4DC3628209EDD890098577F /* FbExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbExercise.swift; sourceTree = "<group>"; };
+		D4DC362A209F497F0098577F /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
 		D4EF5710208C7C0300FEC689 /* MarmaraEgzersiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarmaraEgzersiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EF5713208C7C0300FEC689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4EF5715208C7C0300FEC689 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4EF5715208C7C0300FEC689 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4EF5718208C7C0300FEC689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D4EF571A208C7C0500FEC689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4EF571D208C7C0500FEC689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4EF571F208C7C0500FEC689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4EF5724208C7C0500FEC689 /* MarmaraEgzersizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarmaraEgzersizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EF5728208C7C0500FEC689 /* MarmaraEgzersizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarmaraEgzersizTests.swift; sourceTree = "<group>"; };
 		D4EF572A208C7C0500FEC689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4FDB7CA209B622400DFA999 /* FbUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbUser.swift; sourceTree = "<group>"; };
+		D4FDB7D0209B97F100DFA999 /* ControllerFunctionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFunctionsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BFBDE880F02AC6C0DFB38F9 /* Pods_MarmaraEgzersiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +113,100 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57997BB5EF84C123374A55E1 /* Pods_MarmaraEgzersizTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AF5DBB1E6E663A9A6F84A8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6280115D00302A332325CFE7 /* Pods-MarmaraEgzersiz.debug.xcconfig */,
+				96CB8581C038585163D762F2 /* Pods-MarmaraEgzersiz.release.xcconfig */,
+				4AFFDE4B0CF8F3C5E36E5E8B /* Pods-MarmaraEgzersizTests.debug.xcconfig */,
+				B7992F84F9449DF0564F925D /* Pods-MarmaraEgzersizTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4462510209CAE57002E4238 /* Surveys */ = {
+			isa = PBXGroup;
+			children = (
+				D454DD64209C7535005F3209 /* PainSurveyViewController.swift */,
+				D4462511209CB34A002E4238 /* Muscle1ViewController.swift */,
+				D4462513209CB357002E4238 /* Muscle2ViewController.swift */,
+				D4462515209CB361002E4238 /* Muscle3ViewController.swift */,
+				D446250B209CA204002E4238 /* LastSurveyViewController.swift */,
+			);
+			path = Surveys;
+			sourceTree = "<group>";
+		};
+		D45ECDF5209B48B900244EFE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D479C06B20A253530094F3BB /* Graph */,
+				D4720F6E209DBD7000CD9567 /* TableViews */,
+				D4462510209CAE57002E4238 /* Surveys */,
+				D4EF5715208C7C0300FEC689 /* LoginViewController.swift */,
+				D45ECDF3209B48A800244EFE /* RegisterViewController.swift */,
+				D4462509209C848E002E4238 /* ExercisesViewController.swift */,
+				D4DC362A209F497F0098577F /* ExerciseDetailViewController.swift */,
+				D40E233F209F7547006DCAF3 /* ExerciseVideoViewController.swift */,
+				D40E2343209FC7AF006DCAF3 /* TermsViewController.swift */,
+				D423EB3F20A1042F0051E594 /* SettingsViewController.swift */,
+				D479C06920A253060094F3BB /* StatisticsPageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D4720F6E209DBD7000CD9567 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				D4720F6F209DC01E00CD9567 /* ExerciseTableViewController.swift */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		D4720F71209DC02200CD9567 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D423EB4520A10C480051E594 /* SettingsDaysTableViewCell.swift */,
+				D423EB4620A10C480051E594 /* SettingsHoursTableViewCell.swift */,
+				D423EB3B20A103630051E594 /* SettingsTableViewCell.swift */,
+				D4720F72209DC05F00CD9567 /* ExerciseTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D479C06B20A253530094F3BB /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				D479C06C20A253F30094F3BB /* DailyStatisticsViewController.swift */,
+				D479C06E20A254050094F3BB /* WeeklyStatisticsViewController.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		D497CEFD209B5A4100E44423 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D497CF00209B5BE800E44423 /* FirebaseDBHelper.swift */,
+				D4FDB7D0209B97F100DFA999 /* ControllerFunctionsHelper.swift */,
+				D480ADC520F63F2100279F26 /* NetworkHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D4EF5707208C7C0300FEC689 = {
 			isa = PBXGroup;
 			children = (
 				D4EF5712208C7C0300FEC689 /* MarmaraEgzersiz */,
 				D4EF5727208C7C0500FEC689 /* MarmaraEgzersizTests */,
 				D4EF5711208C7C0300FEC689 /* Products */,
+				8AF5DBB1E6E663A9A6F84A8F /* Pods */,
+				DD931099F238495F3B3C08DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +222,17 @@
 		D4EF5712208C7C0300FEC689 /* MarmaraEgzersiz */ = {
 			isa = PBXGroup;
 			children = (
+				D44A0EC120A38F2F005789D6 /* GoogleService-Info.plist */,
+				D4462507209C76D7002E4238 /* Assets.xcassets */,
+				D4720F71209DC02200CD9567 /* Cells */,
+				D4FDB7C9209B620200DFA999 /* Models */,
+				D497CEFD209B5A4100E44423 /* Helpers */,
+				D45ECDF5209B48B900244EFE /* Controllers */,
 				D4EF5713208C7C0300FEC689 /* AppDelegate.swift */,
-				D4EF5715208C7C0300FEC689 /* ViewController.swift */,
 				D4EF5717208C7C0300FEC689 /* Main.storyboard */,
-				D4EF571A208C7C0500FEC689 /* Assets.xcassets */,
 				D4EF571C208C7C0500FEC689 /* LaunchScreen.storyboard */,
 				D4EF571F208C7C0500FEC689 /* Info.plist */,
+				D446250E209CA365002E4238 /* Identifiers.swift */,
 			);
 			path = MarmaraEgzersiz;
 			sourceTree = "<group>";
@@ -96,6 +246,25 @@
 			path = MarmaraEgzersizTests;
 			sourceTree = "<group>";
 		};
+		D4FDB7C9209B620200DFA999 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4FDB7CA209B622400DFA999 /* FbUser.swift */,
+				D4DC3628209EDD890098577F /* FbExercise.swift */,
+				D49FDBDF20A1DFD6001758EF /* FbSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD931099F238495F3B3C08DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CB9FB2678D3BB10F3B56CE3 /* Pods_MarmaraEgzersiz.framework */,
+				3D707DEE173382FDF82761BF /* Pods_MarmaraEgzersizTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4EF572D208C7C0500FEC689 /* Build configuration list for PBXNativeTarget "MarmaraEgzersiz" */;
 			buildPhases = (
+				253C714ADE7C9B8129686E5D /* [CP] Check Pods Manifest.lock */,
 				D4EF570C208C7C0300FEC689 /* Sources */,
 				D4EF570D208C7C0300FEC689 /* Frameworks */,
 				D4EF570E208C7C0300FEC689 /* Resources */,
+				29D37ABC6A4D33C313B7CACE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4EF5730208C7C0500FEC689 /* Build configuration list for PBXNativeTarget "MarmaraEgzersizTests" */;
 			buildPhases = (
+				71F5A7C922D795F57C503F22 /* [CP] Check Pods Manifest.lock */,
 				D4EF5720208C7C0500FEC689 /* Sources */,
 				D4EF5721208C7C0500FEC689 /* Frameworks */,
 				D4EF5722208C7C0500FEC689 /* Resources */,
@@ -178,7 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EF571E208C7C0500FEC689 /* LaunchScreen.storyboard in Resources */,
-				D4EF571B208C7C0500FEC689 /* Assets.xcassets in Resources */,
+				D44A0EC220A38F2F005789D6 /* GoogleService-Info.plist in Resources */,
+				D4462508209C76D8002E4238 /* Assets.xcassets in Resources */,
 				D4EF5719208C7C0300FEC689 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,13 +365,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		253C714ADE7C9B8129686E5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarmaraEgzersiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29D37ABC6A4D33C313B7CACE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MarmaraEgzersiz/Pods-MarmaraEgzersiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarmaraEgzersiz/Pods-MarmaraEgzersiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71F5A7C922D795F57C503F22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarmaraEgzersizTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4EF570C208C7C0300FEC689 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4EF5716208C7C0300FEC689 /* ViewController.swift in Sources */,
+				D480ADC620F63F2100279F26 /* NetworkHelper.swift in Sources */,
+				D4FDB7CB209B622400DFA999 /* FbUser.swift in Sources */,
+				D423EB4720A10C480051E594 /* SettingsDaysTableViewCell.swift in Sources */,
+				D4FDB7D1209B97F100DFA999 /* ControllerFunctionsHelper.swift in Sources */,
+				D423EB4020A1042F0051E594 /* SettingsViewController.swift in Sources */,
+				D446250A209C848E002E4238 /* ExercisesViewController.swift in Sources */,
+				D4462512209CB34A002E4238 /* Muscle1ViewController.swift in Sources */,
+				D4462514209CB357002E4238 /* Muscle2ViewController.swift in Sources */,
+				D4462516209CB361002E4238 /* Muscle3ViewController.swift in Sources */,
+				D4720F73209DC05F00CD9567 /* ExerciseTableViewCell.swift in Sources */,
+				D479C06D20A253F30094F3BB /* DailyStatisticsViewController.swift in Sources */,
+				D497CF01209B5BE800E44423 /* FirebaseDBHelper.swift in Sources */,
+				D45ECDF4209B48A800244EFE /* RegisterViewController.swift in Sources */,
+				D4EF5716208C7C0300FEC689 /* LoginViewController.swift in Sources */,
+				D40E2344209FC7AF006DCAF3 /* TermsViewController.swift in Sources */,
+				D479C06A20A253060094F3BB /* StatisticsPageViewController.swift in Sources */,
+				D423EB4820A10C480051E594 /* SettingsHoursTableViewCell.swift in Sources */,
+				D4720F70209DC01E00CD9567 /* ExerciseTableViewController.swift in Sources */,
+				D4DC3629209EDD890098577F /* FbExercise.swift in Sources */,
+				D4DC362B209F497F0098577F /* ExerciseDetailViewController.swift in Sources */,
 				D4EF5714208C7C0300FEC689 /* AppDelegate.swift in Sources */,
+				D454DD65209C7535005F3209 /* PainSurveyViewController.swift in Sources */,
+				D479C06F20A254050094F3BB /* WeeklyStatisticsViewController.swift in Sources */,
+				D446250C209CA204002E4238 /* LastSurveyViewController.swift in Sources */,
+				D49FDBE020A1DFD6001758EF /* FbSettings.swift in Sources */,
+				D40E2340209F7547006DCAF3 /* ExerciseVideoViewController.swift in Sources */,
+				D423EB3C20A103640051E594 /* SettingsTableViewCell.swift in Sources */,
+				D446250F209CA365002E4238 /* Identifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,53 +628,50 @@
 		};
 		D4EF572E208C7C0500FEC689 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6280115D00302A332325CFE7 /* Pods-MarmaraEgzersiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9RLUF24G2;
+				DEVELOPMENT_TEAM = 557N5XH3ZP;
 				INFOPLIST_FILE = MarmaraEgzersiz/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.muhendis.MarmaraEgzersiz;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.muhendis.marservikospinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D4EF572F208C7C0500FEC689 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96CB8581C038585163D762F2 /* Pods-MarmaraEgzersiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9RLUF24G2;
+				DEVELOPMENT_TEAM = 557N5XH3ZP;
 				INFOPLIST_FILE = MarmaraEgzersiz/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.muhendis.MarmaraEgzersiz;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.muhendis.marservikospinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		D4EF5731208C7C0500FEC689 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AFFDE4B0CF8F3C5E36E5E8B /* Pods-MarmaraEgzersizTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A9RLUF24G2;
 				INFOPLIST_FILE = MarmaraEgzersizTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.muhendis.MarmaraEgzersizTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -413,17 +682,14 @@
 		};
 		D4EF5732208C7C0500FEC689 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7992F84F9449DF0564F925D /* Pods-MarmaraEgzersizTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A9RLUF24G2;
 				INFOPLIST_FILE = MarmaraEgzersizTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.muhendis.MarmaraEgzersizTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
