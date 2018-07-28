@@ -157,7 +157,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func updateVersion(){
         let preferences = UserDefaults.standard
-        print("version")
         if let version = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
 
             print(version)
@@ -172,9 +171,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 preferences.synchronize()
             }
         }
-        else{
-            print("no version")
-        }
+
         
         
     }
