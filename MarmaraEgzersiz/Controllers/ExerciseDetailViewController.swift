@@ -38,7 +38,7 @@ class ExerciseDetailViewController: UIViewController,UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         if ControllerFunctionsHelper.isLanguageEnglish(){
-            ControllerFunctionsHelper.show_error(viewController: self, title: "Reminder", info: "Please do not forget to press start and finish button before starting exercise.")
+            ControllerFunctionsHelper.show_error_eng(viewController: self, title: "Reminder", info: "Please do not forget to press start and finish button before starting exercise.")
             mExerciseStartStopButton.setTitle("START", for: .normal)
             setST.text = "Sets"
             repeatST.text = "Repeat"

@@ -19,6 +19,14 @@ class ControllerFunctionsHelper {
         viewController.present(alert, animated: true)
     }
     
+    static func show_error_eng(viewController : UIViewController, title: String, info:String) {
+        let alert = UIAlertController(title: title, message: info, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        viewController.present(alert, animated: true)
+    }
+    
     static func show_logout(viewController : UIViewController, title: String, info:String) {
         let alert = UIAlertController(title: title, message: info, preferredStyle: .alert)
         
