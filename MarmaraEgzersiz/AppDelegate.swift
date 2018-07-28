@@ -29,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         mFirebaseDBHelper = FirebaseDBHelper()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-
+        updateVersion()
+       
         if isLoggedIn(){
             //var programViewController: ProgramController = mainStoryboard.instantiateViewController(withIdentifier: Identifiers.PROGRAM_VIEW_CONTROLLER) as! ProgramController
             if let day_diff = ControllerFunctionsHelper.calculate_days_between_dates(firstDateString: getProgramStartDate(), secondDateString: ControllerFunctionsHelper.get_todays_date()){
@@ -152,6 +153,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         } else {
             return preferences.string(forKey: Keys.userFileStartDateKey)!
         }
+    }
+    
+    func updateVersion(){
+        let preferences = UserDefaults.standard
+        print("version")
+        if let version = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+
+            print(version)
+            if preferences.object(forKey: Keys.userFileLastVersionNumberKey) != nil &&
+                Int(version)! > Int((preferences.object(forKey: Keys.userFileLastVersionNumberKey) as! NSString).integerValue){
+                preferences.set(version, forKey: Keys.userFileLastVersionNumberKey)
+                preferences.set(false, forKey: Keys.userFileIsLoggedInKey)
+                preferences.synchronize()
+            }
+            else{
+                preferences.set(version, forKey: Keys.userFileLastVersionNumberKey)
+                preferences.synchronize()
+            }
+        }
+        else{
+            print("no version")
+        }
+        
+        
     }
 
 }

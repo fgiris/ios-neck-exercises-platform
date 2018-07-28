@@ -19,6 +19,7 @@ struct Keys {
     static var userFileIsLastSurveyCompletedKey="UserFileIsLastSurveyCompletedKey"
     static var userFileStartDateKey="UserFileStartDateKey"
     static var userFileLanguageEnglishKey="UserFileLanguageEnglishKey"
+    static var userFileLastVersionNumberKey="UserFileLastVersionNumberKey"
 }
 struct Identifiers{
     static let LOGIN_VIEW_CONTROLLER = "LoginViewControllerStoryBoard"
