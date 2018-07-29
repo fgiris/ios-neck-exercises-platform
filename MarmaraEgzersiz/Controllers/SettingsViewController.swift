@@ -128,7 +128,9 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
                 
                 let alert = UIAlertController(title: "Dil Değişikliği", message: "Dil ayarlarının uygulanması için uygulama baştan başlatılacaktır", preferredStyle: .alert)
-                
+                alert.addAction(UIAlertAction(title: "Vazgeç", style: .default, handler: {action in
+                    sender.setOn(false, animated: true)
+                }))
                 alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { action in
                     switch action.style{
                     case .default:
@@ -157,8 +159,10 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                     topController = presentedViewController
                 }
                 let alert = UIAlertController(title: "Change Language", message: "The app will be restarted in order to apply changes", preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { action in
+                alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {action in
+                    sender.setOn(true, animated: true)
+                }))
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                     switch action.style{
                     case .default:
                         if self.presentedViewController == nil {

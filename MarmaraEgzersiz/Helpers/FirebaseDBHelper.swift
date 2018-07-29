@@ -170,11 +170,16 @@ class FirebaseDBHelper {
 
                     self.ref.child("settings").childByAutoId().setValue(["notificationDay": notificationDay,"notificationTime":notificationTime,"pid":user.uid!])
                     self.ref.child("users/"+user.uid!+"/isFirstSurveyCompleted").setValue(true);
+                    
+                    let preferences = UserDefaults.standard
                     if !isBeforeTreatment{
-                        let preferences = UserDefaults.standard
                         preferences.set(true, forKey: Keys.userFileIsLastSurveyCompletedKey)
-                        preferences.synchronize()
                     }
+                    else{
+                        preferences.set(true, forKey: Keys.userFileIsFirstSurveyCompletedKey)
+                    }
+                    preferences.synchronize()
+                    
                     self.fb_schedule_user_alarms()
                     
                     //ControllerFunctionsHelper.present_controller(identifier: Identifiers.SETTINGS_VIEW_CONTROLLER, viewController: viewController)
