@@ -27,6 +27,8 @@ class FirebaseDBHelper {
     
     
     func fb_register_user(user:[String : Any], viewController : UIViewController) {
+        
+        ref.child("users").keepSynced(true)
         ref.child("users").queryOrdered(byChild: "email").queryEqual(toValue: user["email"]).observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.childrenCount > 0
             {
@@ -356,6 +358,8 @@ class FirebaseDBHelper {
             case .default:
                 let preferences = UserDefaults.standard
                 preferences.set(false, forKey: Keys.userFileIsLoggedInKey)
+                preferences.set(false, forKey: Keys.userFileIsFirstSurveyCompletedKey)
+                preferences.set(false, forKey: Keys.userFileIsLastSurveyCompletedKey)
                 preferences.synchronize()
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewControllerStoryBoard") as? LoginViewController
