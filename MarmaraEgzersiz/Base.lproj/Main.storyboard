@@ -588,11 +588,11 @@
             <objects>
                 <viewController id="5Hz-td-gc2" customClass="ExerciseDetailViewController" customModule="MarmaraEgzersiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNo-ZZ-yC9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v51-04-7YX">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1087"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="587"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46U-wV-SFo">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
@@ -795,7 +795,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iGw-eK-GFk"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1200"/>
+                    <size key="freeformSize" width="375" height="700"/>
                     <connections>
                         <outlet property="divider" destination="nqD-vF-W3j" id="D5E-eW-Fj9"/>
                         <outlet property="expST" destination="AVd-Qk-dFT" id="kWw-y8-AVC"/>
@@ -1319,8 +1319,8 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Son 12 ay süresince herhangi bir zamanda ağrınızdan dolayı olağan işinizi (evde ya da ev dışında) yapmanızı engelledi mi?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EWM-43-gCk">
-                                                        <rect key="frame" x="16" y="32.5" width="343" height="78"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Son 12 ay süresince herhangi bir zamanda ağrınız işlerinizi (evde ya da ev dışında) yapmanızı engelledi mi?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EWM-43-gCk">
+                                                        <rect key="frame" x="0.0" y="32.5" width="375" height="78"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1896,40 +1896,59 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEI-2x-T0F">
-                                        <rect key="frame" x="0.0" y="8" width="375" height="680"/>
+                                        <rect key="frame" x="0.0" y="8" width="375" height="1074.5"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-Li-ne5">
-                                                <rect key="frame" x="5" y="30" width="365" height="401.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">Bu uygulama Marmara Üniversitesi Sağlık Bilimleri Enstitüsü yüksek lisans tez çalışması kapsamında oluşturulmuştur. Uzun süreli akıllı telefon kullanımı gelecek adına, kas-iskelet sistemi problemleri açısından endişe vericidir. Bu bağlamda günde 3 saat ve daha fazla süre akıllı telefon kullanan kişilerin akıllı telefon kullanım pozisyonları ve yapılan araştırmalar baz alınarak bu uygulama oluşturulmuştur.  Uygulama içeriği 3 alt başlıktan; 1)Değerlendirme,  2)Uyarı ve  3) Egzersiz Eğitim Programından oluşmaktadır. 
-Kişilerin günde en az 10-15 dk, haftada 3 gün yapmaları tavsiye edilmektedir.  Kullanım talimatını okudum ve kabul ediyorum.</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK4-ZO-cyO">
-                                                <rect key="frame" x="41.5" y="473" width="292" height="45"/>
-                                                <color key="backgroundColor" red="0.019607843137254902" green="0.18823529411764706" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AwE-E2-cDO">
+                                                <rect key="frame" x="5" y="20" width="365" height="1034.5"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-Li-ne5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="365" height="989.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <mutableString key="text">
+Boyun 
+
+Son yıllarda birçok insanın yaşadığı boyun ağrısı, günlük hayattaki kötü duruştan (postürden) kaynaklanmaktadır. Genel bir duruş kavramı yoktur, farklı postürlerde baş önde, yuvarlak omuzlar, sırtta kifoz, bel çukuru artmış olabilir. Baş önde postürü, uzun süre masa başında oturma ile ortaya çıkan toplumda sık görülen bir boyun duruşudur. Özellikle kolayca erişilebilen bilgisayarların ve akıllı telefonların aşırı kullanılması baş önde postürüne ve boyun ağrısına neden olmaktadır. 
+
+Egzersiz Eğitim Platformu	
+
+M.Ü. Neck Exercises, uzun süre akıllı telefon kullanan, masa başında çalışan ve farklı nedenlerle boyun ağrısı yaşayanlar için koruyucu ve önleyici fizyoterapi kapsamında oluşturulmuş egzersiz eğitim platformudur. Bu uygulama özellikle baş-önde postürüne sahip kişilerin kullanımı için uygundur.
+
+Uygulamaya giriş kayıt olunarak yapılmaktadır. Uygulama kullanımının başında ve sonunda ağrı ve kas-iskelet sistemi problemleri değerlendirilecektir. Uygulama kullanımı için öngörülen haftada en az 3 gün ve 6 hafta süresince kullanılmasıdır. 6 haftalık süre sonrasında pt.mervecan@gmail.com adresine mail atarak programınızı yenileyebilirsiniz ya da farklı bir mail adresi ile uygulamaya yeniden kayıt olabilirsiniz. 
+     
+Uygulamanın içeriği, videoları kopyalama ve/veya diğer kişisel kullanım hakları Marmara Üniversitesi Sağlık Bilimleri Fakültesi bünyesinde korunmaktadır. 
+     
+Kullanıcılar hesaplarının ve şifrelerinin güvenliğini korumaktan sorumludur. Güvenlik ve kullanım ile ilgili herhangi bir problem yaşarsanız pt.mervecan@gmail.com adresi ile iletişime geçebilirsiniz. 
+
+Merve CAN</mutableString>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK4-ZO-cyO">
+                                                        <rect key="frame" x="36.5" y="989.5" width="292" height="45"/>
+                                                        <color key="backgroundColor" red="0.019607843137254902" green="0.18823529411764706" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="BF9-xY-go0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                                        <state key="normal" title="Kabul Ediyorum">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="rv9-WK-wdo" kind="show" id="m0F-Ix-BUu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="BF9-xY-go0"/>
+                                                    <constraint firstItem="BK4-ZO-cyO" firstAttribute="width" secondItem="rXx-Li-ne5" secondAttribute="width" multiplier="0.8" id="9Ow-Ut-VKM"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
-                                                <state key="normal" title="Kabul Ediyorum">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="rv9-WK-wdo" kind="show" id="m0F-Ix-BUu"/>
-                                                </connections>
-                                            </button>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="rXx-Li-ne5" firstAttribute="leading" secondItem="lEI-2x-T0F" secondAttribute="leading" constant="5" id="74x-IP-p7I"/>
-                                            <constraint firstItem="rXx-Li-ne5" firstAttribute="top" secondItem="lEI-2x-T0F" secondAttribute="top" constant="30" id="CEk-qR-imY"/>
-                                            <constraint firstItem="BK4-ZO-cyO" firstAttribute="bottom" secondItem="rXx-Li-ne5" secondAttribute="bottom" multiplier="1.2" id="NMh-gc-cC5"/>
-                                            <constraint firstItem="BK4-ZO-cyO" firstAttribute="width" secondItem="rXx-Li-ne5" secondAttribute="width" multiplier="0.8" id="QmA-RL-2cY"/>
-                                            <constraint firstAttribute="trailing" secondItem="rXx-Li-ne5" secondAttribute="trailing" constant="5" id="gKG-VY-Wle"/>
-                                            <constraint firstAttribute="height" constant="680" id="jRo-hd-VAf"/>
-                                            <constraint firstItem="BK4-ZO-cyO" firstAttribute="centerX" secondItem="lEI-2x-T0F" secondAttribute="centerX" id="oUy-aD-cKx"/>
+                                            <constraint firstItem="AwE-E2-cDO" firstAttribute="top" secondItem="lEI-2x-T0F" secondAttribute="top" constant="20" id="1r9-x9-MEH"/>
+                                            <constraint firstAttribute="bottom" secondItem="AwE-E2-cDO" secondAttribute="bottom" constant="20" id="HiG-eg-fXU"/>
+                                            <constraint firstItem="AwE-E2-cDO" firstAttribute="leading" secondItem="lEI-2x-T0F" secondAttribute="leading" constant="5" id="Rlu-Bl-7or"/>
+                                            <constraint firstAttribute="trailing" secondItem="AwE-E2-cDO" secondAttribute="trailing" constant="5" id="Rr8-6h-QNt"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1954,6 +1973,7 @@ Kişilerin günde en az 10-15 dk, haftada 3 gün yapmaları tavsiye edilmektedir
                     <navigationItem key="navigationItem" title="Kullanım Koşulları" id="Qix-Be-KYV"/>
                     <connections>
                         <outlet property="acceptButton" destination="BK4-ZO-cyO" id="DA4-sP-NCh"/>
+                        <outlet property="termsOfUsageText" destination="rXx-Li-ne5" id="cNA-f2-Owy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkJ-XW-yay" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -120,6 +120,7 @@ class FirebaseDBHelper {
                         }
                         
                         if let day_diff = ControllerFunctionsHelper.calculate_days_between_dates(firstDateString: user.programStartDate!, secondDateString: ControllerFunctionsHelper.get_todays_date()){
+                            NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
                             // Make sure to show last survey after 6 weeks passed and check if the user already completed it
                             if day_diff > (42) && !user.isLastSurveyCompleted!{
                                 ControllerFunctionsHelper.present_controller(identifier: Identifiers.LAST_SURVEY_VIEW_CONTROLLER, viewController: viewController)
@@ -134,6 +135,7 @@ class FirebaseDBHelper {
                         }
                         
                     } else {
+                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
                         if ControllerFunctionsHelper.isLanguageEnglish(){
                             ControllerFunctionsHelper.show_error(viewController: viewController, title: "Database Error", info: "Could not retrieve user data")
                         }
@@ -144,6 +146,7 @@ class FirebaseDBHelper {
                 }
                     
                 else {
+                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
                     if ControllerFunctionsHelper.isLanguageEnglish(){
                         ControllerFunctionsHelper.show_error(viewController: viewController, title: "Missing Info", info: "You entered wrong email or password. Please try again")
                     }
@@ -153,7 +156,7 @@ class FirebaseDBHelper {
                     
                 }
                 
-                // handle newly created user here
+                
             })
             
         }
