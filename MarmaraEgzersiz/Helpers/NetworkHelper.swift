@@ -115,29 +115,46 @@ public class NetworkHelper {
         
         if numberOfVideoToDownload>0
         {
-            if !NetworkHelper.isConnectedToNetwork(){
+            if var topController = UIApplication.shared.keyWindow?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                var title = "Veriler İndirilecek"
+                var message = "Program verileri indirilecektir. Lütfen internete bağlı olduğunuzdan emin olunuz."
                 if ControllerFunctionsHelper.isLanguageEnglish(){
-                    ControllerFunctionsHelper.show_error(viewController: viewController, title: "Download Failed", info: "Please make sure that you have internet connection in order to download media files for exercises.")
-                }
-                else{
-                    ControllerFunctionsHelper.show_error(viewController: viewController, title: "Program Verileri İndirilemedi", info: "Program verilerini indirmek için lütfen internete bağlı olduğunuzdan emin olup tekrar deneyiniz.")
+                    title = "Media Download"
+                    message = "Media files will be downloaded. Please ensure that you have internet connection."
                 }
                 
-            }
-            else{
-                var activityData = ActivityData(size: nil, message: "Lütfen ekranı kapatmadan bekleyiniz. Program verileri indiriliyor. Videoların indirilmesi zaman alabilir. ", messageFont: nil, type: nil, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: UIColor.darkGray, textColor: nil)
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                 
-                if ControllerFunctionsHelper.isLanguageEnglish(){
-                    activityData = ActivityData(size: nil, message: "Media files for exercises are being downloaded. Please do not turn off the screen until download is finished. This process may take some time.", messageFont: nil, type: nil, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: UIColor.darkGray, textColor: nil)
-                    
-                }
-
+                alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: {action in
+                    if !NetworkHelper.isConnectedToNetwork(){
+                        if ControllerFunctionsHelper.isLanguageEnglish(){
+                            ControllerFunctionsHelper.show_error(viewController: viewController, title: "Download Failed", info: "Please make sure that you have internet connection in order to download media files for exercises.")
+                        }
+                        else{
+                            ControllerFunctionsHelper.show_error(viewController: viewController, title: "Program Verileri İndirilemedi", info: "Program verilerini indirmek için lütfen internete bağlı olduğunuzdan emin olup tekrar deneyiniz.")
+                        }
+                        
+                    }
+                    else{
+                        var activityData = ActivityData(size: nil, message: "Lütfen ekranı kapatmadan bekleyiniz. Program verileri indiriliyor. Videoların indirilmesi zaman alabilir. ", messageFont: nil, type: nil, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: UIColor.darkGray, textColor: UIColor.white)
+                        
+                        if ControllerFunctionsHelper.isLanguageEnglish(){
+                            activityData = ActivityData(size: nil, message: "Media files for exercises are being downloaded. Please do not turn off the screen until download is finished. This process may take some time.", messageFont: nil, type: nil, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: UIColor.darkGray, textColor: UIColor.white)
+                            
+                        }
+                        
+                        
+                        for video in eList{
+                            downloadVideoMov(urlString: video[1], fileName: video[0])
+                        }
+                        
+                        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+                    }}))
                 
-                for video in eList{
-                    downloadVideoMov(urlString: video[1], fileName: video[0])
-                }
-                
-                NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+                topController.present(alert, animated: true)
             }
             
         }
