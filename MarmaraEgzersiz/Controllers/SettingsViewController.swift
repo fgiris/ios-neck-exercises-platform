@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var mHoursTableView: UITableView!
     @IBOutlet weak var mDaysTableView: UITableView!
     
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var languageHeader: UILabel!
     @IBOutlet weak var isEnglishSwitch: UISwitch!
     
@@ -32,6 +33,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var hourNotificationText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveButton.layer.cornerRadius = 10
+
+        saveButton.clipsToBounds = true
+        
         if ControllerFunctionsHelper.isLanguageEnglish(){
             self.navigationItem.title = "Settings"
             self.navigationItem.rightBarButtonItem?.title = "Logout"
@@ -116,7 +122,16 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         return cellDay!
         
     }
-
+    @IBAction func saveSettings(_ sender: UIButton) {
+        if ControllerFunctionsHelper.isLanguageEnglish(){
+            ControllerFunctionsHelper.show_info(title: "Settings Saved", info: "Settings successfuly updated. You can continue your exercises.")
+        }
+        else{
+            ControllerFunctionsHelper.show_info(title: "Ayarlar Kaydedildi", info: "Ayarlarınız başarı ile kaydedildi. Egzersizlerinize devam edebilirsiniz.")
+        }
+        
+    }
+    
     @IBAction func changeLanguage(_ sender: UISwitch) {
         let preferences = UserDefaults.standard
         if sender.isOn

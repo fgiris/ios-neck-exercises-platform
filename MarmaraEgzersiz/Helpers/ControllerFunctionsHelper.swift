@@ -62,6 +62,21 @@ class ControllerFunctionsHelper {
         
     }
     
+    static func show_info_eng(title: String, info:String) {
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            let alert = UIAlertController(title: title, message: info, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            
+            topController.present(alert, animated: true)
+        }
+        
+    }
+    
     static func show_registered_info(viewController : UIViewController, title: String, info:String) {
         let alert = UIAlertController(title: title, message: info, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { action in

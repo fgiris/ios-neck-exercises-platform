@@ -169,7 +169,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iGh-R6-oxO">
-                                                <rect key="frame" x="5" y="10" width="365" height="1378"/>
+                                                <rect key="frame" x="5" y="10" width="365" height="1449"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8mY-KT-Uwu">
                                                         <rect key="frame" x="0.0" y="0.0" width="365" height="119"/>
@@ -302,10 +302,28 @@
                                                             </switch>
                                                         </subviews>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="S78-OT-WFi">
+                                                        <rect key="frame" x="0.0" y="1378" width="365" height="71"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4D-Y4-NXe">
+                                                                <rect key="frame" x="8" y="30" width="349" height="33"/>
+                                                                <color key="backgroundColor" red="0.019607843140000001" green="0.18823529410000001" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                                <state key="normal" title="Ayarları Kaydet">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="saveSettings:" destination="GgU-uw-nAa" eventType="touchUpInside" id="mpn-Gj-tgW"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="30" left="8" bottom="8" right="8"/>
+                                                    </stackView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="8mY-KT-Uwu" secondAttribute="trailing" constant="20" id="47L-iK-Owz"/>
                                                     <constraint firstItem="Vtp-rt-qpQ" firstAttribute="top" secondItem="pxk-gL-8Tk" secondAttribute="bottom" constant="20" id="DI9-7S-v22"/>
+                                                    <constraint firstItem="S78-OT-WFi" firstAttribute="top" secondItem="0Dv-W1-6Z5" secondAttribute="bottom" constant="20" id="DeJ-qO-EMY"/>
                                                     <constraint firstItem="iSx-Me-0HV" firstAttribute="top" secondItem="Vtp-rt-qpQ" secondAttribute="bottom" constant="20" id="F2C-Mx-sVR"/>
                                                     <constraint firstAttribute="trailing" secondItem="Vtp-rt-qpQ" secondAttribute="trailing" constant="20" id="F9A-Na-1Ou"/>
                                                     <constraint firstItem="iSx-Me-0HV" firstAttribute="width" secondItem="iGh-R6-oxO" secondAttribute="width" constant="-52" id="TLb-Hh-qSa"/>
@@ -358,6 +376,7 @@
                         <outlet property="languageHeader" destination="3sk-EB-tW4" id="3qH-Rl-svy"/>
                         <outlet property="mDaysTableView" destination="iSx-Me-0HV" id="ipZ-sd-XOs"/>
                         <outlet property="mHoursTableView" destination="pxk-gL-8Tk" id="r2d-ro-xh8"/>
+                        <outlet property="saveButton" destination="i4D-Y4-NXe" id="jfU-W3-w1Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTc-KM-GEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
