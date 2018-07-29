@@ -634,10 +634,10 @@ class FirebaseDBHelper {
         })
         ///////////////////////////
         if ControllerFunctionsHelper.isLanguageEnglish(){
-            notificationBody = "Good morning"
+            notificationBody = "Good Morning😊 How about starting the day by adding movement?"
         }
         else{
-            notificationBody = "Günaydın"
+            notificationBody = "Günaydın😊 güne hareket katarak başlamaya ne dersin?"
         }
         ControllerFunctionsHelper.scheduleAppAlarms(hours: 8, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
         ///////////////////
@@ -648,7 +648,7 @@ class FirebaseDBHelper {
         else{
             notificationBody = "Güne omurganın düzgünlüğünü sağlayarak başlamaya ne dersin?"
         }
-        ControllerFunctionsHelper.scheduleAppAlarms(hours: 10, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 9, minutes: 45, title: "M.Ü. Neck Exercises", message: notificationBody!)
         
         //////////////////
         if ControllerFunctionsHelper.isLanguageEnglish(){
@@ -657,7 +657,7 @@ class FirebaseDBHelper {
         else{
             notificationBody = "Hadi omurganın dikliğini hisset, tek tek omurlarını hisset, başının üzerinde bir şey varmış gibi dik dur."
         }
-        ControllerFunctionsHelper.scheduleAppAlarms(hours: 12, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 11, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
         /////////////////
         
         if ControllerFunctionsHelper.isLanguageEnglish(){
@@ -667,7 +667,7 @@ class FirebaseDBHelper {
             notificationBody = "Duruşunu korumalısın!"
         }
         
-        ControllerFunctionsHelper.scheduleAppAlarms(hours: 14, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 12, minutes: 45, title: "M.Ü. Neck Exercises", message: notificationBody!)
         //////////////////
         if ControllerFunctionsHelper.isLanguageEnglish(){
             notificationBody = "Fix the posture. Feel good!"
@@ -675,7 +675,7 @@ class FirebaseDBHelper {
         else{
             notificationBody = "Duruşunu düzelt. Kendini iyi hisset!"
         }
-        ControllerFunctionsHelper.scheduleAppAlarms(hours: 16, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 14, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
         //////////////////
         if ControllerFunctionsHelper.isLanguageEnglish(){
             notificationBody = "Fix the posture and reduce the tension in your body!"
@@ -683,7 +683,34 @@ class FirebaseDBHelper {
         else{
             notificationBody = "Duruşunu düzelt ve vücudundaki gerginlikleri azalt!"
         }
-        ControllerFunctionsHelper.scheduleAppAlarms(hours: 18, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 15, minutes: 45, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ///////////////////
+        if ControllerFunctionsHelper.isLanguageEnglish(){
+            notificationBody = "Is standing in front of the head, let's fix the attention posture."
+        }
+        else{
+            notificationBody = "Başın önde mi duruyor, dikkat et duruşunu düzeltelim."
+        }
+        
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 17, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ///////////////////
+        if ControllerFunctionsHelper.isLanguageEnglish(){
+            notificationBody = "Are you looking at the phone for a long time?"
+        }
+        else{
+            notificationBody = "Uzun süredir telefona mı bakıyorsun? Bir ara vermeye ne dersin?"
+        }
+        
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 18, minutes: 45, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ///////////////////
+        if ControllerFunctionsHelper.isLanguageEnglish(){
+            notificationBody = "Is it long in front of the head, how about exercising?)"
+        }
+        else{
+            notificationBody = "Uzun süredir başın önde mi duruyor, egzersiz yapmaya ne dersin?"
+        }
+        
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 20, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
         ///////////////////
         if ControllerFunctionsHelper.isLanguageEnglish(){
             notificationBody = "Protect your posture!"
@@ -692,7 +719,7 @@ class FirebaseDBHelper {
             notificationBody = "Duruşunu korumalısın!"
         }
         
-        ControllerFunctionsHelper.scheduleAppAlarms(hours: 20, minutes: 15, title: "M.Ü. Neck Exercises", message: notificationBody!)
+        ControllerFunctionsHelper.scheduleAppAlarms(hours: 21, minutes: 45, title: "M.Ü. Neck Exercises", message: notificationBody!)
         
         
         
