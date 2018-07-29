@@ -11,7 +11,7 @@ import FirebaseInstanceID
 import os.log
 import UserNotifications
 import Charts
-
+import NVActivityIndicatorView
 
 class FirebaseDBHelper {
 
@@ -88,6 +88,14 @@ class FirebaseDBHelper {
             
         }
         else{
+            var activityData = ActivityData(size: nil, message: "Giriş Yapılıyor", messageFont: nil, type: nil, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: UIColor.darkGray, textColor: UIColor.white)
+            if ControllerFunctionsHelper.isLanguageEnglish(){
+                activityData = ActivityData(size: nil, message: "Logging in", messageFont: nil, type: nil, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: UIColor.darkGray, textColor: UIColor.white)
+                
+            }
+            
+            NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+            
             ref.child("users").queryOrdered(byChild: "email_password").queryEqual(toValue: email_password).observeSingleEvent(of: .value, with: { (snapshot) in
                 // Check if user exists
                 if snapshot.childrenCount > 0
@@ -724,13 +732,13 @@ class FirebaseDBHelper {
         })
     }
     
-    func fb_get_statistics_weekly(lineChart : LineChartView, viewController : WeeklyStatisticsViewController)  {
+    func fb_get_statistics_weekly(lineChart : BarChartView, viewController : WeeklyStatisticsViewController)  {
         ref.child("users").queryOrdered(byChild: "token").queryEqual(toValue: self.token).observeSingleEvent(of: .value, with: { (snapshot) in
             // Check if user exists
             
             if snapshot.childrenCount > 0{
                 if let user = FbUser(snapshot: snapshot){
-                    var lineChartEntry = [ChartDataEntry]()
+                    var lineChartEntry = [BarChartDataEntry]()
                     //lineChartEntry.append(ChartDataEntry(x: Double(2), y: Double(50)))
                     var counter = 7
                     for index in 0...6{
@@ -752,7 +760,7 @@ class FirebaseDBHelper {
                                         
                                     }
                                     print("Total duration:"+String(totalDuration)+"---Date: "+ControllerFunctionsHelper.get_date_by_index(index: -1*index))
-                                    lineChartEntry.append(ChartDataEntry(x: Double(index), y: Double(totalDuration/60)))
+                                    lineChartEntry.append(BarChartDataEntry(x: Double(index), y: Double(totalDuration/60)))
                                     counter-=1
                                     ControllerFunctionsHelper.load_line_graph(mWeeklyChart: lineChart, lineChartEntry: lineChartEntry, viewController: viewController)
                                 }
@@ -775,7 +783,7 @@ class FirebaseDBHelper {
         
     }
     
-    func fb_get_statistics_weekly2(lineChart : LineChartView, viewController : WeeklyStatisticsViewController)  {
+    func fb_get_statistics_weekly2(lineChart : BarChartView, viewController : WeeklyStatisticsViewController)  {
         ref.child("users").queryOrdered(byChild: "token").queryEqual(toValue: self.token).observeSingleEvent(of: .value, with: { (snapshot) in
             // Check if user exists
             
@@ -783,68 +791,83 @@ class FirebaseDBHelper {
                 if let user = FbUser(snapshot: snapshot){
 
                         
-                        self.ref.child("finished_exercises").queryOrdered(byChild: "pid").queryEqual(toValue: user.uid!).observeSingleEvent(of: .value, with: { (snapshot) in
-                            // Check if user exists
-                            if snapshot.childrenCount > 0{
-                                var durationArr = [0,0,0,0,0,0,0]
-                                if let exerciseDict = snapshot.value as? [String : Any] {
-                                    for (_ , data) in exerciseDict {
-                                        
-                                        
-                                        guard let dict = data as? [String : Any],
-                                            let duration = dict["duration"] as? Int,
-                                            let date = dict["date"] as? String
-                                            else { return  }
-                                        let dateFormatter = DateFormatter()
-                                        dateFormatter.dateFormat = "dd-MM-yyyy"
-                                        guard let dateConverted = dateFormatter.date(from: date) else {
-                                            fatalError("ERROR: Date conversion failed due to mismatched format.")
+                        self.ref.child("finished_exercises").queryOrdered(byChild: "pid").queryEqual(toValue: user.uid!).observe(.value, with: { (snapshot) in
+                            for child in snapshot.children {
+                                print("printing child")
+                                print(child)
+                                if snapshot.childrenCount > 0{
+                                    var durationArr = [0,0,0,0,0,0,0]
+                                    if let exerciseDict = snapshot.value as? [String : Any] {
+                                        for (_ , data) in exerciseDict {
+                                            
+                                            guard let dict = data as? [String : Any],
+                                                let duration = dict["duration"] as? Int,
+                                                let date = dict["date"] as? String
+                                                else {
+                                                    print("Cannot get date from firebase")
+                                                    return
+                                                    
+                                            }
+                                            let dateFormatter = DateFormatter()
+                                            dateFormatter.dateFormat = "dd-MM-yyyy"
+                                            print(date)
+                                            guard let dateConverted = dateFormatter.date(from: date) else {
+                                                fatalError("ERROR: Date conversion failed due to mismatched format.")
+                                            }
+                                            guard let dateConvertedToday = dateFormatter.date(from: ControllerFunctionsHelper.get_todays_date()) else {
+                                                fatalError("ERROR: Date conversion failed due to mismatched format.")
+                                            }
+                                            
+                                            let calendar = NSCalendar.current
+                                            
+                                            // Replace the hour (time) of both dates with 00:00
+                                            let date1 = calendar.startOfDay(for: dateConverted)
+                                            let date2 = calendar.startOfDay(for: dateConvertedToday)
+                                            
+                                            print(dateConverted)
+                                            print(dateConvertedToday)
+                                            
+                                            let components = calendar.dateComponents([.day], from: date1, to: date2)
+                                            print("Printing components day")
+                                            print(components.day!)
+                                            if components.day!<7 && components.day!>=0
+                                            {
+                                                print("Adding Duration")
+                                                print(duration)
+                                                durationArr[components.day!] += duration
+                                            }
+                                            else{
+                                                print("Could not add duration")
+                                            }
+                                            
+                                            
+                                            
                                         }
-                                        guard let dateConvertedToday = dateFormatter.date(from: ControllerFunctionsHelper.get_todays_date()) else {
-                                            fatalError("ERROR: Date conversion failed due to mismatched format.")
-                                        }
-
-                                        let calendar = NSCalendar.current
+                                        var lineChartEntry = [BarChartDataEntry]()
+                                        //lineChartEntry.append(ChartDataEntry(x: 6, y: 200.0))
+                                        lineChartEntry.append(BarChartDataEntry(x: 1, y: Double(durationArr[6]/60)))
+                                        lineChartEntry.append(BarChartDataEntry(x: 2, y: Double(durationArr[5]/60)))
+                                        lineChartEntry.append(BarChartDataEntry(x: 3, y: Double(durationArr[4]/60)))
+                                        lineChartEntry.append(BarChartDataEntry(x: 4, y: Double(durationArr[3]/60)))
+                                        lineChartEntry.append(BarChartDataEntry(x: 5, y: Double(durationArr[2]/60)))
+                                        lineChartEntry.append(BarChartDataEntry(x: 6, y: Double(durationArr[1]/60)))
+                                        lineChartEntry.append(BarChartDataEntry(x: 7, y: Double(durationArr[0]/60)))
+                                        print(Double(durationArr[0]))
+                                        //lineChartEntry.append(ChartDataEntry(x: 1, y: 300.0))
+                                        //lineChartEntry.append(ChartDataEntry(x: 3, y: Double(durationArr[0])))
+                                        //lineChartEntry.append(ChartDataEntry(x: 6, y: 200.0))
+                                        //lineChartEntry.append(ChartDataEntry(x: 7, y: 400.0))
                                         
-                                        // Replace the hour (time) of both dates with 00:00
-                                        let date1 = calendar.startOfDay(for: dateConverted)
-                                        let date2 = calendar.startOfDay(for: dateConvertedToday)
-                                        
-                                        let components = calendar.dateComponents([.day], from: date1, to: date2)
-                                        print(components.day!)
-                                        if components.day!<7 && components.day!>=0
-                                        {
-                                            print("Adding Duration")
-                                            print(duration)
-                                            durationArr[components.day!] += duration
-                                        }
+                                        ControllerFunctionsHelper.load_line_graph(mWeeklyChart: lineChart, lineChartEntry: lineChartEntry, viewController: viewController)
                                         
                                         
                                         
                                     }
-                                    var lineChartEntry = [ChartDataEntry]()
-                                    //lineChartEntry.append(ChartDataEntry(x: 6, y: 200.0))
-                                    lineChartEntry.append(ChartDataEntry(x: 1, y: Double(durationArr[6]/60)))
-                                    lineChartEntry.append(ChartDataEntry(x: 2, y: Double(durationArr[5]/60)))
-                                    lineChartEntry.append(ChartDataEntry(x: 3, y: Double(durationArr[4]/60)))
-                                    lineChartEntry.append(ChartDataEntry(x: 4, y: Double(durationArr[3]/60)))
-                                    lineChartEntry.append(ChartDataEntry(x: 5, y: Double(durationArr[2]/60)))
-                                    lineChartEntry.append(ChartDataEntry(x: 6, y: Double(durationArr[1]/60)))
-                                    lineChartEntry.append(ChartDataEntry(x: 7, y: Double(durationArr[0]/60)))
-                                    print(Double(durationArr[0]))
-                                    //lineChartEntry.append(ChartDataEntry(x: 1, y: 300.0))
-                                    //lineChartEntry.append(ChartDataEntry(x: 3, y: Double(durationArr[0])))
-                                    //lineChartEntry.append(ChartDataEntry(x: 6, y: 200.0))
-                                    //lineChartEntry.append(ChartDataEntry(x: 7, y: 400.0))
                                     
-                                    ControllerFunctionsHelper.load_line_graph(mWeeklyChart: lineChart, lineChartEntry: lineChartEntry, viewController: viewController)
-
-
-                                   
+                                    
                                 }
-                                
-                                
                             }
+                            
                             
                         })
                         

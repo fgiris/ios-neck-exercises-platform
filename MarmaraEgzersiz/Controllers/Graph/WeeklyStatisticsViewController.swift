@@ -11,7 +11,8 @@ import Charts
 
 class WeeklyStatisticsViewController: UIViewController {
 
-    @IBOutlet weak var mWeeklyChart: LineChartView!
+
+    @IBOutlet weak var mWeeklyChart: BarChartView!
     var mFirebaseDBHelper:FirebaseDBHelper?
     override func viewDidLoad() {
         super.viewDidLoad()

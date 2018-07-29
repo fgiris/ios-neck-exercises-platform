@@ -192,18 +192,19 @@ class ControllerFunctionsHelper {
         
         
     }
-    static func load_line_graph(mWeeklyChart:LineChartView, lineChartEntry: [ChartDataEntry], viewController : WeeklyStatisticsViewController)  {
+    static func load_line_graph(mWeeklyChart:BarChartView, lineChartEntry: [BarChartDataEntry], viewController : WeeklyStatisticsViewController)  {
 
-        var line = LineChartDataSet(values: lineChartEntry, label: "Egzersiz Süresi (dk)")
+        var line = BarChartDataSet(values: lineChartEntry, label: "Egzersiz Süresi (dk)")
         
         if isLanguageEnglish(){
-            line = LineChartDataSet(values: lineChartEntry, label: "Exercise Time (min)")
+            line = BarChartDataSet(values: lineChartEntry, label: "Exercise Time (min)")
         }
-        line.colors = [UIColor(red: 5/255.0, green: 48/255.0, blue: 86/255.0, alpha: 1)]
-        line.circleColors = [UIColor(red: 5/255.0, green: 48/255.0, blue: 86/255.0, alpha: 1)]
+        line.setColor(UIColor(red: 5/255.0, green: 48/255.0, blue: 86/255.0, alpha: 1))
+        //line.colors = [UIColor(red: 5/255.0, green: 48/255.0, blue: 86/255.0, alpha: 1)]
+        //line.circleColors = [UIColor(red: 5/255.0, green: 48/255.0, blue: 86/255.0, alpha: 1)]
         
        
-        let data = LineChartData()
+        let data = BarChartData()
         data.addDataSet(line)
 
         

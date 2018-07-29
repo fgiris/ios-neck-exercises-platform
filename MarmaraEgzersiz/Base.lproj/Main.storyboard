@@ -431,7 +431,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXB-Kh-YbA" customClass="LineChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXB-Kh-YbA" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="37" y="133" width="300" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -453,7 +453,7 @@
                         <viewLayoutGuide key="safeArea" id="CCa-Fu-u7Q"/>
                     </view>
                     <connections>
-                        <outlet property="mWeeklyChart" destination="hXB-Kh-YbA" id="W1d-54-tQf"/>
+                        <outlet property="mWeeklyChart" destination="hXB-Kh-YbA" id="L1u-wL-sz6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unu-0i-3xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
