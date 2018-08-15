@@ -50,6 +50,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyk-tq-BMo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                                 <rect key="frame" x="56.5" y="60" width="262.5" height="30"/>
                                                                 <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                             </textField>
                                                         </subviews>
@@ -1904,7 +1905,7 @@
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-Li-ne5">
                                                         <rect key="frame" x="0.0" y="0.0" width="365" height="989.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <mutableString key="text">
+                                                        <string key="text">
 Boyun 
 
 Son yıllarda birçok insanın yaşadığı boyun ağrısı, günlük hayattaki kötü duruştan (postürden) kaynaklanmaktadır. Genel bir duruş kavramı yoktur, farklı postürlerde baş önde, yuvarlak omuzlar, sırtta kifoz, bel çukuru artmış olabilir. Baş önde postürü, uzun süre masa başında oturma ile ortaya çıkan toplumda sık görülen bir boyun duruşudur. Özellikle kolayca erişilebilen bilgisayarların ve akıllı telefonların aşırı kullanılması baş önde postürüne ve boyun ağrısına neden olmaktadır. 
@@ -1919,7 +1920,7 @@ Uygulamanın içeriği, videoları kopyalama ve/veya diğer kişisel kullanım h
      
 Kullanıcılar hesaplarının ve şifrelerinin güvenliğini korumaktan sorumludur. Güvenlik ve kullanım ile ilgili herhangi bir problem yaşarsanız pt.mervecan@gmail.com adresi ile iletişime geçebilirsiniz. 
 
-Merve CAN</mutableString>
+Merve CAN</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>

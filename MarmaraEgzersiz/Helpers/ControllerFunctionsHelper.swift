@@ -82,10 +82,11 @@ class ControllerFunctionsHelper {
         alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { action in
             switch action.style{
             case .default:
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                /*let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewControllerStoryBoard") as? LoginViewController
                 controller?.isLoggingOut = true
-                viewController.present(controller!, animated: true, completion: nil)
+                viewController.present(controller!, animated: true, completion: nil)*/
+                ControllerFunctionsHelper.present_controller(identifier: Identifiers.LOGIN_VIEW_CONTROLLER, viewController: viewController)
             
             case .cancel:
                 print("cancel")
@@ -146,7 +147,10 @@ class ControllerFunctionsHelper {
     
     static func scheduleAppAlarms(hours: Int, minutes: Int, title:String,message:String){
         print("Controller alarm")
+        print(message)
+        print(title)
         let content = UNMutableNotificationContent()
+        content.categoryIdentifier = "exerciseNotifications"
         
         content.sound = UNNotificationSound.default()
         
